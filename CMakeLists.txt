@@ -33,6 +33,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 11)
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE
     JUCE_STANDALONE_APPLICATION=1
+    JUCE_PLUGINHOST_AU=1
     JUCE_DISPLAY_SPLASH_SCREEN=0
     JUCE_WEB_BROWSER=0
     JUCE_ALLOW_STATIC_NULL_VARIABLES=0
@@ -59,6 +60,7 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     juce::juce_video
     juce::juce_recommended_config_flags
     juce::juce_recommended_warning_flags
+    "-framework AudioUnit"
     ${POPSICLE_LTO})
 
 _juce_initialise_target(${PROJECT_NAME} VERSION 1.0.0)
