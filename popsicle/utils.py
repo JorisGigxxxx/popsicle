@@ -95,7 +95,10 @@ def juce_bootstrap():
 
     __cppyy.load_library(__get_juce_library_path(root_path))
 
-    __cppyy.cppdef(__get_juce_defs(root_path))
+    __cppyy.cppdef(__get_juce_defs(root_path))   
 
     if __sys.platform in ["darwin"]:
         __cppyy.cppdef("namespace juce { extern void initialiseNSApplication(); }")
+
+
+
