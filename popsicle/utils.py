@@ -89,7 +89,7 @@ def __get_juce_defs(root_path):
 
 @__lru_cache(maxsize=1024)
 def juce_bootstrap():
-    root_path = __os.path.abspath(__os.path.join(__os.path.dirname(__file__)))
+    root_path = __os.path.abspath(__os.path.join(__os.path.dirname(__file__)))   
 
     __cppyy.add_include_path(__get_juce_include_path(root_path))
 
