@@ -19,7 +19,7 @@ class MainContentComponent(juce_multi(juce.Component, juce.Timer)):
 
         random = juce.Random.getSystemRandom()
         rect = juce.Rectangle[int](0, 0, 20, 20)
- 
+
         for _ in range(100):
             g.setColour(juce.Colour(
                 random.nextInt(256),
